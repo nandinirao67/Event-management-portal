@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KG Reddy — College Event Portal</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@500;700&family=Inter:wght@400;600&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- animated background layers -->
+  <div class="bg-layer"></div>
+  <div class="bg-blobs" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <div class="logo-container" aria-hidden="false">
+            <img src="data:image/png;base64,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"
+         alt="KG Reddy College logo" class="logo" />
+          <span class="shine" aria-hidden="true"></span>
+        </div>
+        <div class="brand-text">
+          <h1 class="college-name">KG Reddy College of Engineering & Technology</h1>
+          <p class="tagline">Event Management Portal</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">Upcoming Events</a></li>
+          <li><a href="#register">Register</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="controls">
+        <button id="darkToggle" class="control-btn" aria-pressed="false">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container fade-up">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <h2 class="hero-title">Celebrate Innovation • Compete • Learn</h2>
+          <p class="hero-sub">Build. Compete. Showcase — join college-level technical & cultural events across the year. Explore upcoming fests including <strong>IKARUS</strong>.</p>
+          <div class="hero-actions">
+            <a href="#events" class="btn primary">See Events</a>
+            <a href="#register" class="btn ghost">Register</a>
+          </div>
+        </div>
+
+        <aside class="hero-card glass">
+          <h3 class="card-title">Next Big Fest</h3>
+          <p class="muted">IKARUS — Technical Fest</p>
+          <p class="big-date">Mar 12–14, 2025</p>
+          <a href="#events" class="btn small">View Schedule</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="container section fade-up">
+      <h3 class="section-title">About College Fests</h3>
+      <p class="lead">KG Reddy hosts multiple technical, cultural and sports events every year to help students learn, network and showcase their skills.</p>
+    </section>
+
+    <section id="events" class="container section fade-up">
+      <h3 class="section-title">Upcoming Events</h3>
+
+      <div class="events-grid">
+        <article class="event-card glass zoom">
+          <h4 class="event-title">IKARUS — Technical Fest</h4>
+          <p class="event-meta">Hackathons • Workshops • Tech Expo</p>
+          <time datetime="2025-03-12">Mar 12–14, 2025</time>
+          <a href="#register" class="btn small">Register</a>
+        </article>
+
+        <article class="event-card glass zoom">
+          <h4 class="event-title">Cultural Fest — Fiesta</h4>
+          <p class="event-meta">Music • Dance • Theatre</p>
+          <time datetime="2025-01-20">Jan 20, 2025</time>
+          <a href="#register" class="btn small">Register</a>
+        </article>
+
+        <article class="event-card glass zoom">
+          <h4 class="event-title">Sports Meet</h4>
+          <p class="event-meta">Cricket • Volleyball • Athletics</p>
+          <time datetime="2024-12-05">Dec 05, 2024</time>
+          <a href="#register" class="btn small">Register</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="register" class="container section fade-up">
+      <h3 class="section-title">Register for an Event</h3>
+
+      <form id="regForm" class="form-grid glass">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="dept">Department / Year</label>
+          <input id="dept" name="dept" type="text" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="form-row">
+          <label for="event">Select Event</label>
+          <select id="event" name="event" required>
+            <option value="">-- choose an event --</option>
+            <option>IKARUS</option>
+            <option>Cultural Fest</option>
+            <option>Sports Meet</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <form id="regForm">
+    <!-- name, dept, email, event -->
+</form>
+<button type="submit" class="submit-btn">Register Now</button>
+          <script type="module">
+            <body>
+              <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBdrM9Ps4YXvWUXRTY9ndhnKpBM09XrMIE",
+    authDomain: "kgrcet-2025.firebaseapp.com",
+    projectId: "kgrcet-2025",
+    storageBucket: "kgrcet-2025.firebasestorage.app",
+    messagingSenderId: "745127040646",
+    appId: "1:745127040646:web:5616f8042d7487021de307",
+    measurementId: "G-SHC3HWFQR3"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+</div></form>
+</section>
+</main>
+</html>
+</body>
